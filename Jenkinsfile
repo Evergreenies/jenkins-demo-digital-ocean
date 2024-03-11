@@ -45,6 +45,7 @@ sleep 10'''
       steps {
         sh '''echo "deploy to prod"
 sleep 10'''
+        input(message: 'Would you like to continue?', id: 'deploy-to-prod', ok: 'Yes please')
       }
     }
 
